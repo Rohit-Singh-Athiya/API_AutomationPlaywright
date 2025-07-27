@@ -25,6 +25,12 @@ stages:
             displayName: 'Install Playwright browsers'
 
           - script: npx playwright test --output=playwright-report
-            displayName: 'Run Playwright Test'                 
+            displayName: 'Run Playwright Test'    
 
+          - task: PublishBuildArtifacts@1
+            inputs:
+              PathToPublish: 'playwright-report'
+              ArtifactName: 'TestResults'
+              publishLocation: 'Container'
+            displayName: 'Publish Test Artifacts'
     
