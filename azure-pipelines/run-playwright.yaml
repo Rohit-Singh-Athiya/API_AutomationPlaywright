@@ -9,7 +9,7 @@ pool:
 stages:
   - stage: 'Testing'
     jobs:
-      - job: 'Run Playwright Test'
+      - job: 'Run_Playwright_Test'
         displayName: 'Install and Run playwright'
 
         steps:
