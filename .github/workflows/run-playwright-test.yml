@@ -33,3 +33,14 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report
+      
+      - name: Prepare report for GitHub Pages
+        run: |
+          rm -rf public
+          cp -r playwright-report public
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public    
