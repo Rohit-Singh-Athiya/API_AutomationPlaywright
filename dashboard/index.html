@@ -3,95 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> API Automation Test Dashboard</title>
+  <title>API Automation Test Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6fa;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
-    .header {
-      background: #22223b;
-      color: #fff;
-      padding: 1.5rem 0;
-      text-align: center;
-      letter-spacing: 1px;
-      font-size: 2rem;
-      font-weight: 600;
-      box-shadow: 0 2px 8px rgba(34,34,59,0.05);
-    }
+    
     .container {
-      max-width: 420px;
-      margin: 2.5rem auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(34,34,59,0.10);
-      padding: 5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h2 {
-      color: #22223b;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
+    
+    .header h1 {
+      margin: 0;
+      color: #333;
+      font-size: 24px;
     }
+    
+    .metrics {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .stat {
+      padding: 10px;
+    }
+    
+    .stat-number {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .passed { color: #4CAF50; }
+    .failed { color: #F44336; }
+    .skipped { color: #FF9800; }
+    
+    .chart-container {
+      width: 300px;
+      margin: 20px auto;
+    }
+    
     .status {
-      margin-top: 1.5rem;
-      font-size: 1.15rem;
-      font-weight: 500;
-      padding: 0.75rem;
+      text-align: center;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    
+    .status.pass {
+      background: #E8F5E9;
+      color: #2E7D32;
+    }
+    
+    .status.fail {
+      background: #FFEBEE;
+      color: #C62828;
+    }
+    
+    .report-section {
+      background: white;
       border-radius: 8px;
-      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
-    .green { color: #388e3c; background: #e8f5e9; }
-    .red { color: #c62828; background: #ffebee; }
-    #resultsChart {
-      max-width: 220px;
-      max-height: 220px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 1.5rem auto;
+    
+    .report-header {
+      background: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .last-updated {
-      color: #666;
-      font-size: 0.98rem;
-      margin-top: 1.2rem;
-      letter-spacing: 0.2px;
+    
+    .report-header h3 {
+      margin: 0;
     }
-    .playwright-report {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #4a85d7;
-      color: #fff;
+    
+    .btn {
+      background: #007BFF;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
+      font-size: 14px;
     }
-    .playwright-report:hover {
-      background: #0c2955;
+    
+    .btn:hover {
+      background: #0056b3;
     }
-    @media (max-width: 500px) {
-      .container { padding: 1rem 0.5rem; }
-      .header { font-size: 1.2rem; }
+    
+    .report-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    
+    .last-updated {
+      text-align: center;
+      color: #666;
+      margin: 10px 0;
+    }
+    
+    @media (max-width: 600px) {
+      .stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .report-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      .report-frame {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header">🧪 Automation Test Dashboard</div>
   <div class="container">
-    <a href="./resources/index.html" target="blank" class= "playwright-report"> View Playwright Report</a> 
-    <h2>Latest Test Results</h2>
-    <canvas id="resultsChart" width="220" height="220"></canvas>
-    <canvas id="barChart" width="320" height="180" style="margin-top: 2rem;"></canvas>
-    <div class="status" id="summary"></div>
-    <div class="last-updated">📅 Last updated: <span id="lastRun"></span></div>
+    <!-- Header -->
+    <div class="header">
+      <h1>🧪 Test Dashboard</h1>
+    </div>
+    
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number passed" id="passedCount">0</div>
+          <div>Passed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number failed" id="failedCount">0</div>
+          <div>Failed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number skipped" id="skippedCount">0</div>
+          <div>Skipped</div>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <canvas id="resultsChart"></canvas>
+      </div>
+      
+      <div class="status" id="overallStatus">Loading...</div>
+      
+      <div class="last-updated">
+        Last updated: <span id="lastRun">Loading...</span>
+      </div>
+    </div>
+    
+    <!-- Report Section -->
+    <div class="report-section">
+      <div class="report-header">
+        <h3>📄 Test Report</h3>
+        <a href="./resources/index.html" target="_blank" class="btn">Open in New Tab</a>
+      </div>
+      <iframe src="./resources/index.html" class="report-frame"></iframe>
+    </div>
   </div>
+
   <script>
+    // Load and display test data
     fetch('./resources/test-results-json.json')
       .then(response => response.json())
       .then(data => {
@@ -101,59 +206,49 @@
         const skipped = stats.skipped || 0;
         const timestamp = stats.startTime || new Date().toISOString();
 
-        document.getElementById('summary').innerHTML =
-          `<span class="${failed === 0 ? 'green' : 'red'}">` +
-          `<strong>Status:</strong> ` +
-          (failed === 0 ? "All tests passed!" : `${failed} test(s) failed`) +
-          `</span>`;
+        // Update counts
+        document.getElementById('passedCount').textContent = passed;
+        document.getElementById('failedCount').textContent = failed;
+        document.getElementById('skippedCount').textContent = skipped;
 
+        // Update status
+        const statusEl = document.getElementById('overallStatus');
+        if (failed === 0) {
+          statusEl.textContent = '✅ All tests passed';
+          statusEl.className = 'status pass';
+        } else {
+          statusEl.textContent = `❌ ${failed} test(s) failed`;
+          statusEl.className = 'status fail';
+        }
+
+        // Update timestamp
         document.getElementById('lastRun').textContent = new Date(timestamp).toLocaleString();
 
+        // Create simple pie chart
         new Chart(document.getElementById('resultsChart'), {
           type: 'pie',
           data: {
             labels: ['Passed', 'Failed', 'Skipped'],
             datasets: [{
-              label: 'Test Results',
               data: [passed, failed, skipped],
-              backgroundColor: ['#4caf50', '#f44336', '#ff9800']
+              backgroundColor: ['#4CAF50', '#F44336', '#FF9800']
             }]
           },
           options: {
+            responsive: true,
             plugins: {
               legend: {
-                display: true,
-                position: 'bottom',
-                labels: {
-                  font: { size: 14 }
-                }
+                position: 'bottom'
               }
             }
           }
         });
-        new Chart(document.getElementById('barChart'), {
-          type: 'bar',
-          data: {
-            labels: ['Passed', 'Failed', 'Skipped'],
-            datasets: [{
-              label: 'Test Results',
-              data: [passed, failed, skipped],
-              backgroundColor: ['#4caf50', '#f44336', '#ff9800']
-          }]
-        },
-        options: {
-          plugins: {
-            legend: { display: false }
-          },
-          scales: {
-          y: {
-            beginAtZero: true,
-            ticks: { stepSize: 1 }
-          },
-        }
-    }
-  });
-});
+      })
+      .catch(error => {
+        console.error('Error loading data:', error);
+        document.getElementById('overallStatus').textContent = 'Error loading data';
+        document.getElementById('overallStatus').className = 'status fail';
+      });
   </script>
 </body>
 </html>
