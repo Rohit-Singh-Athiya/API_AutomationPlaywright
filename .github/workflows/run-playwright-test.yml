@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write    # Required for basic repo access
+  pages: write       # Required for deploying to GitHub Pages
+  id-token: write    # Required for GitHub Pages deployment
+
 jobs:
   Run_Playwright_Test:
     runs-on: ubuntu-latest
