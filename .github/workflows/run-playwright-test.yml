@@ -39,5 +39,5 @@ jobs:
       name: Deploy Playwright dashboard
       uses: ./.github/workflows/deploy-report-to-page.yml
       with: 
-        artifact-name: Dashboard
-        publish-dir: dashboard
+        artifact-name: playwright-report
+        publish-dir: ./public
