@@ -34,16 +34,10 @@ jobs:
           name: playwright-report
           path: playwright-report
           
-      - name: Prepare report for GitHub Pages
-        run: |
-          rm -rf public
-          mkdir -p public/resources
-          cp -r playwright-report/* public/resources/
-          cp dashboard/index.html public/
-          cp test-results-json.json public/resources/  
-          
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public    
+  deploy-dashboard:
+      needs: Run_Playwright_Test
+      name: Deploy Playwright dashboard
+      uses: ./.github/workflows/deploy-report-to-page.yml
+      with: 
+        artifact-name: Dashboard
+        publish-dir: dashboard
