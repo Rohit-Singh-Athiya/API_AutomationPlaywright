@@ -12,24 +12,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/commit/c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-        "commitHash": "c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-        "buildHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/actions/runs/16601717048"
+        "commitHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/commit/e6ee271a843e408e79bd0396f5c70075044a3b9c",
+        "commitHash": "e6ee271a843e408e79bd0396f5c70075044a3b9c",
+        "buildHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/actions/runs/16603726518"
       },
       "gitCommit": {
-        "shortHash": "c98e606",
-        "hash": "c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-        "subject": "Dashboard Update",
-        "body": "Dashboard Update\n",
+        "shortHash": "e6ee271",
+        "hash": "e6ee271a843e408e79bd0396f5c70075044a3b9c",
+        "subject": "ReadMe",
+        "body": "ReadMe\n",
         "author": {
           "name": "Rohit Singh Athiya",
           "email": "rohitsathiya1000@gmail.com",
-          "time": 1753805994000
+          "time": 1753811926000
         },
         "committer": {
           "name": "Rohit Singh Athiya",
           "email": "rohitsathiya1000@gmail.com",
-          "time": 1753805994000
+          "time": 1753811926000
         },
         "branch": "main"
       },
@@ -68,24 +68,24 @@
         "retries": 2,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/commit/c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-            "commitHash": "c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-            "buildHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/actions/runs/16601717048"
+            "commitHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/commit/e6ee271a843e408e79bd0396f5c70075044a3b9c",
+            "commitHash": "e6ee271a843e408e79bd0396f5c70075044a3b9c",
+            "buildHref": "https://github.com/Rohit-Singh-Athiya/API_AutomationPlaywright/actions/runs/16603726518"
           },
           "gitCommit": {
-            "shortHash": "c98e606",
-            "hash": "c98e6069fe8efd02cf1ed1a641a65aaefe5d4940",
-            "subject": "Dashboard Update",
-            "body": "Dashboard Update\n",
+            "shortHash": "e6ee271",
+            "hash": "e6ee271a843e408e79bd0396f5c70075044a3b9c",
+            "subject": "ReadMe",
+            "body": "ReadMe\n",
             "author": {
               "name": "Rohit Singh Athiya",
               "email": "rohitsathiya1000@gmail.com",
-              "time": 1753805994000
+              "time": 1753811926000
             },
             "committer": {
               "name": "Rohit Singh Athiya",
               "email": "rohitsathiya1000@gmail.com",
-              "time": 1753805994000
+              "time": 1753811926000
             },
             "branch": "main"
           },
@@ -138,12 +138,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 548,
+                      "duration": 453,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:38.815Z",
+                      "startTime": "2025-07-30T02:23:41.088Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -172,12 +172,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 82,
+                      "duration": 80,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.374Z",
+                      "startTime": "2025-07-30T02:23:41.551Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -223,12 +223,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 157,
+                      "duration": 153,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.465Z",
+                      "startTime": "2025-07-30T02:23:41.640Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -257,12 +257,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 85,
+                      "duration": 83,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.626Z",
+                      "startTime": "2025-07-30T02:23:41.797Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -291,12 +291,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 81,
+                      "duration": 79,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.715Z",
+                      "startTime": "2025-07-30T02:23:41.883Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -325,12 +325,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 82,
+                      "duration": 81,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.799Z",
+                      "startTime": "2025-07-30T02:23:41.965Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -359,12 +359,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 80,
+                      "duration": 78,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.884Z",
+                      "startTime": "2025-07-30T02:23:42.049Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -393,12 +393,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 81,
+                      "duration": 78,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:39.967Z",
+                      "startTime": "2025-07-30T02:23:42.130Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -444,7 +444,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 82,
+                      "duration": 80,
                       "errors": [],
                       "stdout": [
                         {
@@ -453,7 +453,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:40.057Z",
+                      "startTime": "2025-07-30T02:23:42.216Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -482,7 +482,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 83,
+                      "duration": 79,
                       "errors": [],
                       "stdout": [
                         {
@@ -491,7 +491,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:40.142Z",
+                      "startTime": "2025-07-30T02:23:42.298Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -520,12 +520,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 83,
+                      "duration": 79,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:40.228Z",
+                      "startTime": "2025-07-30T02:23:42.380Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -554,12 +554,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 83,
+                      "duration": 81,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T16:25:40.314Z",
+                      "startTime": "2025-07-30T02:23:42.462Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -579,8 +579,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-29T16:25:38.179Z",
-    "duration": 2234.274,
+    "startTime": "2025-07-30T02:23:40.477Z",
+    "duration": 2081.366,
     "expected": 12,
     "skipped": 0,
     "unexpected": 0,
