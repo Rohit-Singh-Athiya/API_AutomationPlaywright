@@ -61,6 +61,7 @@ npx playwright test
   After running tests, open `playwright-report/index.html` in your browser.
 - **GitHub Pages Dashboard:**  
   Visit [your GitHub Pages site](https://<your-username>.github.io/API_AutomationPlaywright/) for the latest dashboard and reports.
+<img width="966" height="901" alt="image" src="https://github.com/user-attachments/assets/6f442fe5-8911-44d9-a431-a4aa70534781" />
 
 ---
 
@@ -91,3 +92,4 @@ npx playwright test
 ---
 
 *Feel free to improve this README and the project!*
+
